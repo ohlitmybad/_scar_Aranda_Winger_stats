@@ -886,7 +886,7 @@ function setLanguage(language) {
     const url = new URL(window.location.href);
     if (language === 'en') {
         url.searchParams.delete('lang');
-        applyLanguage('en'); // Changed from 'xx' to 'en'
+        applyLanguage('xx'); // Changed from 'xx' to 'en'
     } else {
         url.searchParams.set('lang', language);
         applyLanguage(language);
@@ -932,7 +932,6 @@ function translatePosition(position) {
 }
 
 function applyLanguage(language) {
-    console.log(language);
 
     if (language === 'en') {
         // Clear currentTranslations for English
